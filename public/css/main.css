@@ -2,6 +2,18 @@ body {
     background-color: gray;
 }
 
+.dhh {
+
+    float: right;
+    height: 50px;
+}
+
+.whoops {
+  display: absolute;
+  float: right;
+  height: 50px;
+  right: 50px;
+}
 
 .btn {
     width: 100%;
