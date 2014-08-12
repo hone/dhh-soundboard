@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DHH Soundboard">
+    <meta name="author" content="Terence Lee">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>DHH Soundboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+    <script src="/javascript/jquery-2.1.1.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="page-header">
+        <h1>Soundboard</h1>
+      </div>
+      <p>
+
+        <h3>
+          <button id="whoops-btn" type="button" class="btn btn btn-default">Whoops!</button>
+          <audio id="whoops-audio" preload="true">
+            <source src="/audio/whoops.mp3" type="audio/mpeg" />
+          </audio>
+          
+          <button id="it-worked-btn" type="button" class="btn btn btn-default">It Worked!</button>
+          <audio id="it-worked-audio" preload="true">
+            <source src="/audio/whoops_it_worked.mp3" type="audio/mpeg" />
+          </audio>
+
+          <button id="not-doing-btn" type="button" class="btn btn btn-default">Not Doing</button>
+          <audio id="not-doing-audio" preload="true">
+            <source src="/audio/look_at_all_the_things_im_not_doing.mp3" type="audio/mpeg" />
+          </audio>
+
+          <button id="not-a-lot-of-work-btn" type="button" class="btn btn btn-default">Not a Lot of Work</button>
+          <audio id="not-a-lot-of-work-audio" preload="true">
+            <source src="/audio/thats_not_a_lot_of_work_for_hello_world.mp3" type="audio/mpeg" />
+          </audio>
+        </h3>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="/javascript/application.js"></script>
+  </body>
+</html>
+
