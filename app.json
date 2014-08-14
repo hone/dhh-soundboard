@@ -1,0 +1,7 @@
+{
+  "name": "DHH Soundboard",
+  "description": "Tribute soundboard of the great 'How to Build a Blog Engine in 15 Minutes with Ruby on Rails'.",
+  "repository": "https://github.com/hone/dhh-soundboard",
+  "logo": "https://raw.githubusercontent.com/jc00ke/dhh-soundboard/master/public/images/dhh.jpeg",
+  "keywords": ["DHH", "rails", "soundboard", "lulz"]
+}
