@@ -27,9 +27,11 @@ var currentDHH = {};
 var everPlayed = false;
 
 var updateTimeTracking = function() {
-  if (this.currentTime >= currentDHH.start + currentDHH.length) {
+  var endTime = currentDHH.start + currentDHH.length;
+  if (this.currentTime >= endTime) {
     this.pause();
-	console.log(this.currentTime);
+	// force it to actually not continue. thanks firefox :(
+	this.currentTime = endTime;
   }
 };
 
