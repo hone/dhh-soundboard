@@ -1,4 +1,4 @@
-var dhhSprite = document.getElementById('dhh-sprite');
+var dhhSprite = $('#dhh-sprite');
 
 var dhhClips = {
   whoops: {
@@ -29,31 +29,38 @@ var everPlayed = false;
 var updateTimeTracking = function() {
   if (this.currentTime >= currentDHH.start + currentDHH.length) {
     this.pause();
+	console.log(this.currentTime);
   }
 };
 
-dhhSprite.addEventListener('timeupdate', updateTimeTracking, false);
+dhhSprite.on('timeupdate', updateTimeTracking);
 
 var setup_audio = function(btn_id, audio_id) {
   $(btn_id).on("click", function(event) {
     event.preventDefault();
+	// This is shady mobile safari business here. We can't set the current time until it's been played. Lé sigh.
+	// Also, firefox doesn't like it when the time is changed during the playing event
+	dhhSprite.on("playing", function() {
+	  dhhSprite.off("playing");
+	  this.pause();
+	  this.currentTime = currentDHH.start;
+	  everPlayed = true;
+	  this.play();
+	});
+
     playAudio(audio_id);
   });
 };
 
 playAudio = function(track) {
+  var audio = dhhSprite.get(0);
   if (dhhClips[track] && dhhClips[track].length) {
     currentDHH = dhhClips[track];
     if (!everPlayed) {
-      // This is shady mobile safari business here. We can't set the current time until it's been played. Lé sigh.
-      dhhSprite.addEventListener("playing", function(){
-        this.currentTime = currentDHH.start;
-        everPlayed = true;
-      });
-      dhhSprite.play();
+      audio.play();
     } else {
-      dhhSprite.currentTime = currentDHH.start;
-      dhhSprite.play();
+      audio.currentTime = currentDHH.start;
+      audio.play();
     }
   }
 };
