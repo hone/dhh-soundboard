@@ -1,18 +1,24 @@
 body {
-    background-color: gray;
+  font-family: Georgia serif;
+  background-color: #f6f5ed;
+}
+
+.page-header {
+  position: relative;
 }
 
 .dhh {
-
     float: right;
     height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
 }
 
 .whoops {
-  display: absolute;
-  float: right;
+  position: absolute;
   height: 50px;
   right: 50px;
+  top: -20px;
 }
 
 .btn {
